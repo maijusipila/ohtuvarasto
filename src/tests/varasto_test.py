@@ -71,3 +71,7 @@ class TestVarasto(unittest.TestCase):
 
     def test_merkkijonoesitys(self):
         self.assertIn("saldo = 0", str(self.varasto))
+    
+
+    def test_uudella_varastolla_oikea_tilavuus(self):
+    self.assertAlmostEqual(self.varasto.tilavuus, 999)  # Tahllaan vääränlainen testi
